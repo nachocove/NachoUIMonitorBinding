@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAE389651991A84100CBAF33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE389641991A84100CBAF33 /* Foundation.framework */; };
+		BAE389731991A84100CBAF33 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE389721991A84100CBAF33 /* XCTest.framework */; };
+		BAE389741991A84100CBAF33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE389641991A84100CBAF33 /* Foundation.framework */; };
+		BAE389761991A84100CBAF33 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE389751991A84100CBAF33 /* UIKit.framework */; };
+		BAE389791991A84100CBAF33 /* libNachoUIMonitor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE389611991A84100CBAF33 /* libNachoUIMonitor.a */; };
+		BAE3897F1991A84100CBAF33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAE3897D1991A84100CBAF33 /* InfoPlist.strings */; };
+		BAE389811991A84100CBAF33 /* NachoUIMonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE389801991A84100CBAF33 /* NachoUIMonitorTests.m */; };
+		BAE3898F1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE3898E1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BAE389771991A84100CBAF33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAE389591991A84100CBAF33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAE389601991A84100CBAF33;
+			remoteInfo = NachoUIMonitor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BAE3895F1991A84100CBAF33 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BAE389611991A84100CBAF33 /* libNachoUIMonitor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNachoUIMonitor.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE389641991A84100CBAF33 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BAE389681991A84100CBAF33 /* NachoUIMonitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NachoUIMonitor-Prefix.pch"; sourceTree = "<group>"; };
+		BAE389711991A84100CBAF33 /* NachoUIMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NachoUIMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE389721991A84100CBAF33 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BAE389751991A84100CBAF33 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BAE3897C1991A84100CBAF33 /* NachoUIMonitorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NachoUIMonitorTests-Info.plist"; sourceTree = "<group>"; };
+		BAE3897E1991A84100CBAF33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BAE389801991A84100CBAF33 /* NachoUIMonitorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NachoUIMonitorTests.m; sourceTree = "<group>"; };
+		BAE3898D1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+NachoCoveMonitor.h"; sourceTree = "<group>"; };
+		BAE3898E1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+NachoCoveMonitor.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAE3895E1991A84100CBAF33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE389651991A84100CBAF33 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE3896E1991A84100CBAF33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE389791991A84100CBAF33 /* libNachoUIMonitor.a in Frameworks */,
+				BAE389731991A84100CBAF33 /* XCTest.framework in Frameworks */,
+				BAE389761991A84100CBAF33 /* UIKit.framework in Frameworks */,
+				BAE389741991A84100CBAF33 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAE389581991A84100CBAF33 = {
+			isa = PBXGroup;
+			children = (
+				BAE389661991A84100CBAF33 /* NachoUIMonitor */,
+				BAE3897A1991A84100CBAF33 /* NachoUIMonitorTests */,
+				BAE389631991A84100CBAF33 /* Frameworks */,
+				BAE389621991A84100CBAF33 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAE389621991A84100CBAF33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAE389611991A84100CBAF33 /* libNachoUIMonitor.a */,
+				BAE389711991A84100CBAF33 /* NachoUIMonitorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAE389631991A84100CBAF33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAE389641991A84100CBAF33 /* Foundation.framework */,
+				BAE389721991A84100CBAF33 /* XCTest.framework */,
+				BAE389751991A84100CBAF33 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BAE389661991A84100CBAF33 /* NachoUIMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				BAE389671991A84100CBAF33 /* Supporting Files */,
+				BAE3898D1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.h */,
+				BAE3898E1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.m */,
+			);
+			path = NachoUIMonitor;
+			sourceTree = "<group>";
+		};
+		BAE389671991A84100CBAF33 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAE389681991A84100CBAF33 /* NachoUIMonitor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BAE3897A1991A84100CBAF33 /* NachoUIMonitorTests */ = {
+			isa = PBXGroup;
+			children = (
+				BAE389801991A84100CBAF33 /* NachoUIMonitorTests.m */,
+				BAE3897B1991A84100CBAF33 /* Supporting Files */,
+			);
+			path = NachoUIMonitorTests;
+			sourceTree = "<group>";
+		};
+		BAE3897B1991A84100CBAF33 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAE3897C1991A84100CBAF33 /* NachoUIMonitorTests-Info.plist */,
+				BAE3897D1991A84100CBAF33 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAE389601991A84100CBAF33 /* NachoUIMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAE389841991A84100CBAF33 /* Build configuration list for PBXNativeTarget "NachoUIMonitor" */;
+			buildPhases = (
+				BAE3895D1991A84100CBAF33 /* Sources */,
+				BAE3895E1991A84100CBAF33 /* Frameworks */,
+				BAE3895F1991A84100CBAF33 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NachoUIMonitor;
+			productName = NachoUIMonitor;
+			productReference = BAE389611991A84100CBAF33 /* libNachoUIMonitor.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BAE389701991A84100CBAF33 /* NachoUIMonitorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAE389871991A84100CBAF33 /* Build configuration list for PBXNativeTarget "NachoUIMonitorTests" */;
+			buildPhases = (
+				BAE3896D1991A84100CBAF33 /* Sources */,
+				BAE3896E1991A84100CBAF33 /* Frameworks */,
+				BAE3896F1991A84100CBAF33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAE389781991A84100CBAF33 /* PBXTargetDependency */,
+			);
+			name = NachoUIMonitorTests;
+			productName = NachoUIMonitorTests;
+			productReference = BAE389711991A84100CBAF33 /* NachoUIMonitorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAE389591991A84100CBAF33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = NachoCove;
+			};
+			buildConfigurationList = BAE3895C1991A84100CBAF33 /* Build configuration list for PBXProject "NachoUIMonitor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BAE389581991A84100CBAF33;
+			productRefGroup = BAE389621991A84100CBAF33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAE389601991A84100CBAF33 /* NachoUIMonitor */,
+				BAE389701991A84100CBAF33 /* NachoUIMonitorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAE3896F1991A84100CBAF33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE3897F1991A84100CBAF33 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAE3895D1991A84100CBAF33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE3898F1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE3896D1991A84100CBAF33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE389811991A84100CBAF33 /* NachoUIMonitorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BAE389781991A84100CBAF33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAE389601991A84100CBAF33 /* NachoUIMonitor */;
+			targetProxy = BAE389771991A84100CBAF33 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BAE3897D1991A84100CBAF33 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAE3897E1991A84100CBAF33 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BAE389821991A84100CBAF33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BAE389831991A84100CBAF33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAE389851991A84100CBAF33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/NachoUIMonitor.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NachoUIMonitor/NachoUIMonitor-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BAE389861991A84100CBAF33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/NachoUIMonitor.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NachoUIMonitor/NachoUIMonitor-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BAE389881991A84100CBAF33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NachoUIMonitor/NachoUIMonitor-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NachoUIMonitorTests/NachoUIMonitorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BAE389891991A84100CBAF33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NachoUIMonitor/NachoUIMonitor-Prefix.pch";
+				INFOPLIST_FILE = "NachoUIMonitorTests/NachoUIMonitorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAE3895C1991A84100CBAF33 /* Build configuration list for PBXProject "NachoUIMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE389821991A84100CBAF33 /* Debug */,
+				BAE389831991A84100CBAF33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAE389841991A84100CBAF33 /* Build configuration list for PBXNativeTarget "NachoUIMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE389851991A84100CBAF33 /* Debug */,
+				BAE389861991A84100CBAF33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BAE389871991A84100CBAF33 /* Build configuration list for PBXNativeTarget "NachoUIMonitorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE389881991A84100CBAF33 /* Debug */,
+				BAE389891991A84100CBAF33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BAE389591991A84100CBAF33 /* Project object */;
+}
