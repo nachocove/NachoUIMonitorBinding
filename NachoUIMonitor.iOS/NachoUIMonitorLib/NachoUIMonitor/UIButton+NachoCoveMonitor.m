@@ -11,16 +11,19 @@
 
 NSString *ncUIButtonKey = @"ncUIButton";
 
-@implementation UIButton (NachoCoveMonitor)
+@implementation UIButton (NcUIButtonMonitor)
 
+// For debugging only
+#if 0
 + (void)dump:(Class)cls method:(SEL)selector
 {
     Method method = class_getInstanceMethod(cls, selector);
     NSLog(@"[%@ %@] %p", NSStringFromClass(cls), NSStringFromSelector(selector),
           method_getImplementation(method));
 }
+#endif
 
-+ (void)ncSwizzle:(SwizzleCallback)callback
++ (void)setup:(UIButtonCallback)callback
 {
     objc_setAssociatedObject(ncUIButtonKey, NULL, callback, OBJC_ASSOCIATION_RETAIN);
     Class cls = objc_getClass("UIButton");
@@ -43,7 +46,7 @@ NSString *ncUIButtonKey = @"ncUIButton";
 
 - (void)ncSendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event
 {
-    SwizzleCallback callback = objc_getAssociatedObject(ncUIButtonKey, NULL);
+    UIButtonCallback callback = objc_getAssociatedObject(ncUIButtonKey, NULL);
     if (nil != callback) {
         callback(self.currentTitle);
     }

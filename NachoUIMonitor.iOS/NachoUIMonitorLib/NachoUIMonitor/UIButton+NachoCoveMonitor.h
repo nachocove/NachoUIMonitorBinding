@@ -10,12 +10,18 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^SwizzleCallback)(NSString *desc);
+typedef void (^UIButtonCallback)(NSString *desc);
 
-@interface UIButton (NachoCoveMonitor)
+@interface UIButton (NcUIButtonMonitor)
 
-+ (void)ncSwizzle:(SwizzleCallback)callback;
++ (void)setup:(UIButtonCallback)callback;
 
 - (void)ncSendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event;
+
+@end
+
+@interface NachoCoveUIMonitor : NSObject
+
++ (void)setupUIButton:(UIButtonCallback)callback;
 
 @end

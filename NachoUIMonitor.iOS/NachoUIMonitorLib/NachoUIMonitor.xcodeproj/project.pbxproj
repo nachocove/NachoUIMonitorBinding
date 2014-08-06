@@ -15,6 +15,7 @@
 		BAE3897F1991A84100CBAF33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAE3897D1991A84100CBAF33 /* InfoPlist.strings */; };
 		BAE389811991A84100CBAF33 /* NachoUIMonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE389801991A84100CBAF33 /* NachoUIMonitorTests.m */; };
 		BAE3898F1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE3898E1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.m */; };
+		BAE389951992DC5800CBAF33 /* NachoUIMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE389941992DC5800CBAF33 /* NachoUIMonitor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		BAE389801991A84100CBAF33 /* NachoUIMonitorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NachoUIMonitorTests.m; sourceTree = "<group>"; };
 		BAE3898D1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+NachoCoveMonitor.h"; sourceTree = "<group>"; };
 		BAE3898E1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+NachoCoveMonitor.m"; sourceTree = "<group>"; };
+		BAE389931992DC5800CBAF33 /* NachoUIMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NachoUIMonitor.h; sourceTree = "<group>"; };
+		BAE389941992DC5800CBAF33 /* NachoUIMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NachoUIMonitor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				BAE389671991A84100CBAF33 /* Supporting Files */,
 				BAE3898D1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.h */,
 				BAE3898E1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.m */,
+				BAE389931992DC5800CBAF33 /* NachoUIMonitor.h */,
+				BAE389941992DC5800CBAF33 /* NachoUIMonitor.m */,
 			);
 			path = NachoUIMonitor;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE389951992DC5800CBAF33 /* NachoUIMonitor.m in Sources */,
 				BAE3898F1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +409,7 @@
 				BAE389861991A84100CBAF33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAE389871991A84100CBAF33 /* Build configuration list for PBXNativeTarget "NachoUIMonitorTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +418,7 @@
 				BAE389891991A84100CBAF33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
