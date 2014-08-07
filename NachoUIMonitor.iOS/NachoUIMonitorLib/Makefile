@@ -16,5 +16,3 @@ $(SIMULATOR_LIB):
 clean:
 	rm -f $(LIB)
 	rm -fr build/
-	rm -fr NachoUIMonitor.xcodeproj/project.xcworkspace
-	rm -fr NachoUIMonitor.xcodeproj/xcuserdata

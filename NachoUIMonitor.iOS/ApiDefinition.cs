@@ -5,7 +5,7 @@ using MonoTouch.ObjCRuntime;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace NachoUIMonitor.iOS
+namespace NachoUIMonitorBinding
 {
 	// The first step to creating a binding is to add your native library ("libNativeLibrary.a")
 	// to the project by right-clicking (or Control-clicking) the folder containing this source
@@ -63,14 +63,13 @@ namespace NachoUIMonitor.iOS
 	//
 	// For more information, see http://docs.xamarin.com/ios/advanced_topics/binding_objective-c_libraries
 	//
-	delegate void UIButtonCallback (string description);
+	public delegate void UIButtonCallback (string description);
 
-	[BaseType (typeof (UIButton))]
-	[Category]
-	interface NachoCoveMonitor
-	{
-		[Static, Export ("ncSwizzle:")]
-		void Swizzle (UIButtonCallback callback);
-	}
+    [BaseType (typeof (NSObject))]
+    interface NachoUIMonitor
+    {
+        [Static, Export ("setupUIButton:")]
+        void SetupUIButton (UIButtonCallback callback);
+    }
 }
 

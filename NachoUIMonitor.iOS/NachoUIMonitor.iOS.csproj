@@ -9,6 +9,8 @@
     <RootNamespace>NachoUIMonitor.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>NachoUIMonitor.iOS</AssemblyName>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,10 +47,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
   <ItemGroup>
-    <ObjcBindingNativeLibrary Include="NachoUIMonitorLib\libNachoUIMonitor.a" />
+    <ObjcBindingNativeLibrary Include="libNachoUIMonitor.a" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NachoUIMonitorLib\libNachoUIMonitor.linkwith.cs">
+    <Compile Include="libNachoUIMonitor.linkwith.cs">
       <DependentUpon>libNachoUIMonitor.a</DependentUpon>
     </Compile>
   </ItemGroup>
