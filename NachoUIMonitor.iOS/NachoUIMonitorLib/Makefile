@@ -3,7 +3,9 @@ IPHONE_LIB := build/Release-iphoneos/$(LIB)
 SIMULATOR_LIB := build/Release-iphonesimulator/$(LIB)
 XCBUILD := xcodebuild -target NachoUIMonitor -configuration Release
 
-$(LIB): $(IPHONE_LIB) $(SIMULATOR_LIB)
+.PHONY: $(IPHONE_LIB) $(SIMULATOR_LIB)
+
+../$(LIB): $(IPHONE_LIB) $(SIMULATOR_LIB)
 	lipo -create -output $@ $^
 
 $(IPHONE_LIB):
