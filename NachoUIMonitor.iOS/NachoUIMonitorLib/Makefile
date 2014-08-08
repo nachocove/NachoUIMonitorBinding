@@ -18,3 +18,4 @@ $(SIMULATOR_LIB):
 clean:
 	rm -f $(LIB)
 	rm -fr build/
+	rm -f ../$(LIB)
