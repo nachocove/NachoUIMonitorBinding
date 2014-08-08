@@ -26,4 +26,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)button1Clicked:(id)sender
+{
+    NSLog(@"button1 clicked");
+}
+
+- (IBAction)button2Clicked:(id)sender
+{
+    NSLog(@"button2 clicked");
+}
+
+- (IBAction)segCtrl1Changed:(id)sender
+{
+    NSLog(@"segCtrl1 changed");
+}
+
+- (IBAction)segCtrl2Changed:(id)sender
+{
+    NSLog(@"segCtrl2 changed");
+}
+
 @end

@@ -7,12 +7,15 @@
 //
 
 #import "UIMonitorTesterAppDelegate.h"
+#import "../../NachoUIMonitor/NachoUIMonitor.h"
 
 @implementation UIMonitorTesterAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [NachoUIMonitor setupUIButton:^(NSString *desc) {
+        NSLog(@"[UIButton] %@", desc);
+    }];
     return YES;
 }
 							

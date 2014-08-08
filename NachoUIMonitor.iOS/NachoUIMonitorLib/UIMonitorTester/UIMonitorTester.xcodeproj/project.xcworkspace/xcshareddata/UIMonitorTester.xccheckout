@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AEF54C17-E257-48A5-B7AE-E474BC32A47A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>UIMonitorTester</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9B24C1C8-65A4-4184-AEE8-ECC4B050285F</key>
+		<string>https://github.com/nachocove/NachoUIMonitorBinding.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NachoUIMonitor.iOS/NachoUIMonitorLib/UIMonitorTester/UIMonitorTester.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9B24C1C8-65A4-4184-AEE8-ECC4B050285F</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/nachocove/NachoUIMonitorBinding.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9B24C1C8-65A4-4184-AEE8-ECC4B050285F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9B24C1C8-65A4-4184-AEE8-ECC4B050285F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NachoUIMonitorBinding</string>
+		</dict>
+	</array>
+</dict>
+</plist>

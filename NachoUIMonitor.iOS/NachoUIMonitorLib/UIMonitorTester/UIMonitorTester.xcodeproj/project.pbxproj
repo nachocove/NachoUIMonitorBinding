@@ -22,6 +22,7 @@
 		BAE389C719943F2D00CBAF33 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE389A619943F2C00CBAF33 /* UIKit.framework */; };
 		BAE389CF19943F2D00CBAF33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAE389CD19943F2D00CBAF33 /* InfoPlist.strings */; };
 		BAE389D119943F2D00CBAF33 /* UIMonitorTesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE389D019943F2D00CBAF33 /* UIMonitorTesterTests.m */; };
+		BAE389DB199443FE00CBAF33 /* libNachoUIMonitor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE389DA199443FE00CBAF33 /* libNachoUIMonitor.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		BAE389CC19943F2D00CBAF33 /* UIMonitorTesterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIMonitorTesterTests-Info.plist"; sourceTree = "<group>"; };
 		BAE389CE19943F2D00CBAF33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BAE389D019943F2D00CBAF33 /* UIMonitorTesterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIMonitorTesterTests.m; sourceTree = "<group>"; };
+		BAE389DA199443FE00CBAF33 /* libNachoUIMonitor.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNachoUIMonitor.a; path = ../../libNachoUIMonitor.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE389DB199443FE00CBAF33 /* libNachoUIMonitor.a in Frameworks */,
 				BAE389A519943F2C00CBAF33 /* CoreGraphics.framework in Frameworks */,
 				BAE389A719943F2C00CBAF33 /* UIKit.framework in Frameworks */,
 				BAE389A319943F2C00CBAF33 /* Foundation.framework in Frameworks */,
@@ -103,6 +106,7 @@
 		BAE389A119943F2C00CBAF33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BAE389DA199443FE00CBAF33 /* libNachoUIMonitor.a */,
 				BAE389A219943F2C00CBAF33 /* Foundation.framework */,
 				BAE389A419943F2C00CBAF33 /* CoreGraphics.framework */,
 				BAE389A619943F2C00CBAF33 /* UIKit.framework */,
@@ -394,6 +398,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIMonitorTester/UIMonitorTester-Prefix.pch";
 				INFOPLIST_FILE = "UIMonitorTester/UIMonitorTester-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/henry/git2/NachoUIMonitorBinding/NachoUIMonitor.iOS,
+				);
+				"OTHER_LDFLAGS[arch=*]" = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -407,6 +416,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIMonitorTester/UIMonitorTester-Prefix.pch";
 				INFOPLIST_FILE = "UIMonitorTester/UIMonitorTester-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/henry/git2/NachoUIMonitorBinding/NachoUIMonitor.iOS,
+				);
+				OTHER_LDFLAGS = "-all_load";
+				"OTHER_LDFLAGS[arch=*]" = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
