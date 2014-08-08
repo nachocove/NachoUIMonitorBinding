@@ -1,0 +1,7 @@
+NachoUIMonitorBinding.userprefs
+NachoUIMonitor.iOS/bin
+NachoUIMonitor.iOS/obj
+NachoUIMonitor.iOS/NachoUIMonitorLib/build/
+**/project.xcworkspace/
+**/xcuserdata/
+
