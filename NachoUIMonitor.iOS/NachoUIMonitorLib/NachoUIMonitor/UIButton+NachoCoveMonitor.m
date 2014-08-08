@@ -11,10 +11,12 @@
 
 NSString *ncUIButtonKey = @"ncUIButton";
 
+#define  DEBUG (0)
+
 @implementation UIButton (NcUIButtonMonitor)
 
 // For debugging only
-#if 0
+#if DEBUG
 + (void)dump:(Class)cls method:(SEL)selector
 {
     Method method = class_getInstanceMethod(cls, selector);
@@ -28,20 +30,33 @@ NSString *ncUIButtonKey = @"ncUIButton";
     objc_setAssociatedObject(ncUIButtonKey, NULL, callback, OBJC_ASSOCIATION_RETAIN);
     Class cls = objc_getClass("UIButton");
     
-    // Dump the existing method
-    //[UIButton dump:cls method:@selector(sendAction:to:forEvent:)];
-    //[UIButton dump:cls method:@selector(ncSendAction:to:forEvent:)];
+    SEL origSelector = @selector(sendAction:to:forEvent:);
+    SEL newSelector = @selector(ncSendAction:to:forEvent:);
     
-    // Add the method first
+    // Dump the existing method
+#if DEBUG
+    [UIButton dump:cls method:origSelector];
+    [UIButton dump:cls method:newSelector];
+#endif
+    
     Method origMethod = class_getInstanceMethod(cls, @selector(sendAction:to:forEvent:));
     Method newMethod = class_getInstanceMethod(cls, @selector(ncSendAction:to:forEvent:));
     IMP origFunction = method_getImplementation(origMethod);
     IMP newFunction = method_getImplementation(newMethod);
-    
+
+    // Add the method first
+    class_addMethod(cls, origSelector, origFunction, method_getTypeEncoding(origMethod));
+    origMethod = class_getInstanceMethod(cls, origSelector);
+
     if (nil == method_setImplementation(origMethod, newFunction)) {
         NSLog(@"fail to swizzle");
     }
     method_setImplementation(newMethod, origFunction);
+
+#if DEBUG
+    [UIButton dump:cls method:@selector(sendAction:to:forEvent:)];
+    [UIButton dump:cls method:@selector(ncSendAction:to:forEvent:)];
+#endif
 }
 
 - (void)ncSendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event
