@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAB157731995A1330078F44E /* NcSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB157721995A1330078F44E /* NcSwizzle.m */; };
+		BAB157761995A29E0078F44E /* UISegmentedControl+NcUISegmentedControlMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB157751995A29E0078F44E /* UISegmentedControl+NcUISegmentedControlMonitor.m */; };
+		BAB15779199631F10078F44E /* UISwitch+NcUISwitchMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB15778199631F10078F44E /* UISwitch+NcUISwitchMonitor.m */; };
+		BAB1577F1996786E0078F44E /* UIDatePicker+NcUIDatePickerMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB1577E1996786E0078F44E /* UIDatePicker+NcUIDatePickerMonitor.m */; };
+		BAB1578219967BFB0078F44E /* UITextField+NcUITextFieldMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB1578119967BFB0078F44E /* UITextField+NcUITextFieldMonitor.m */; };
+		BAB1578519967DF70078F44E /* UIPageControl+NcUIPageControlMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB1578419967DF70078F44E /* UIPageControl+NcUIPageControlMonitor.m */; };
 		BAE389651991A84100CBAF33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE389641991A84100CBAF33 /* Foundation.framework */; };
 		BAE389731991A84100CBAF33 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE389721991A84100CBAF33 /* XCTest.framework */; };
 		BAE389741991A84100CBAF33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE389641991A84100CBAF33 /* Foundation.framework */; };
@@ -41,6 +47,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BAB157711995A1330078F44E /* NcSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NcSwizzle.h; sourceTree = "<group>"; };
+		BAB157721995A1330078F44E /* NcSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NcSwizzle.m; sourceTree = "<group>"; };
+		BAB157741995A29E0078F44E /* UISegmentedControl+NcUISegmentedControlMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+NcUISegmentedControlMonitor.h"; sourceTree = "<group>"; };
+		BAB157751995A29E0078F44E /* UISegmentedControl+NcUISegmentedControlMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+NcUISegmentedControlMonitor.m"; sourceTree = "<group>"; };
+		BAB15777199631F10078F44E /* UISwitch+NcUISwitchMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISwitch+NcUISwitchMonitor.h"; sourceTree = "<group>"; };
+		BAB15778199631F10078F44E /* UISwitch+NcUISwitchMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISwitch+NcUISwitchMonitor.m"; sourceTree = "<group>"; };
+		BAB1577D1996786E0078F44E /* UIDatePicker+NcUIDatePickerMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDatePicker+NcUIDatePickerMonitor.h"; sourceTree = "<group>"; };
+		BAB1577E1996786E0078F44E /* UIDatePicker+NcUIDatePickerMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDatePicker+NcUIDatePickerMonitor.m"; sourceTree = "<group>"; };
+		BAB1578019967BFB0078F44E /* UITextField+NcUITextFieldMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+NcUITextFieldMonitor.h"; sourceTree = "<group>"; };
+		BAB1578119967BFB0078F44E /* UITextField+NcUITextFieldMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+NcUITextFieldMonitor.m"; sourceTree = "<group>"; };
+		BAB1578319967DF70078F44E /* UIPageControl+NcUIPageControlMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPageControl+NcUIPageControlMonitor.h"; sourceTree = "<group>"; };
+		BAB1578419967DF70078F44E /* UIPageControl+NcUIPageControlMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPageControl+NcUIPageControlMonitor.m"; sourceTree = "<group>"; };
 		BAE389611991A84100CBAF33 /* libNachoUIMonitor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNachoUIMonitor.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE389641991A84100CBAF33 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BAE389681991A84100CBAF33 /* NachoUIMonitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NachoUIMonitor-Prefix.pch"; sourceTree = "<group>"; };
@@ -112,10 +130,22 @@
 			isa = PBXGroup;
 			children = (
 				BAE389671991A84100CBAF33 /* Supporting Files */,
-				BAE3898D1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.h */,
-				BAE3898E1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.m */,
 				BAE389931992DC5800CBAF33 /* NachoUIMonitor.h */,
 				BAE389941992DC5800CBAF33 /* NachoUIMonitor.m */,
+				BAB157711995A1330078F44E /* NcSwizzle.h */,
+				BAB157721995A1330078F44E /* NcSwizzle.m */,
+				BAE3898D1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.h */,
+				BAE3898E1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.m */,
+				BAB157741995A29E0078F44E /* UISegmentedControl+NcUISegmentedControlMonitor.h */,
+				BAB157751995A29E0078F44E /* UISegmentedControl+NcUISegmentedControlMonitor.m */,
+				BAB15777199631F10078F44E /* UISwitch+NcUISwitchMonitor.h */,
+				BAB15778199631F10078F44E /* UISwitch+NcUISwitchMonitor.m */,
+				BAB1577D1996786E0078F44E /* UIDatePicker+NcUIDatePickerMonitor.h */,
+				BAB1577E1996786E0078F44E /* UIDatePicker+NcUIDatePickerMonitor.m */,
+				BAB1578019967BFB0078F44E /* UITextField+NcUITextFieldMonitor.h */,
+				BAB1578119967BFB0078F44E /* UITextField+NcUITextFieldMonitor.m */,
+				BAB1578319967DF70078F44E /* UIPageControl+NcUIPageControlMonitor.h */,
+				BAB1578419967DF70078F44E /* UIPageControl+NcUIPageControlMonitor.m */,
 			);
 			path = NachoUIMonitor;
 			sourceTree = "<group>";
@@ -228,7 +258,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAE389951992DC5800CBAF33 /* NachoUIMonitor.m in Sources */,
+				BAB157761995A29E0078F44E /* UISegmentedControl+NcUISegmentedControlMonitor.m in Sources */,
 				BAE3898F1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.m in Sources */,
+				BAB15779199631F10078F44E /* UISwitch+NcUISwitchMonitor.m in Sources */,
+				BAB157731995A1330078F44E /* NcSwizzle.m in Sources */,
+				BAB1578519967DF70078F44E /* UIPageControl+NcUIPageControlMonitor.m in Sources */,
+				BAB1577F1996786E0078F44E /* UIDatePicker+NcUIDatePickerMonitor.m in Sources */,
+				BAB1578219967BFB0078F44E /* UITextField+NcUITextFieldMonitor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,4 +15,29 @@
     [UIButton setup:callback];
 }
 
++ (void)setupUISegmentedControl:(UISegmentedControlCallback)callback
+{
+    [UISegmentedControl setup:callback];
+}
+
++ (void)setupUISwitch:(UISwitchCallback)callback
+{
+    [UISwitch setup:callback];
+}
+
++ (void)setupUIDatePicker:(UIDatePickerCallback)callback
+{
+    [UIDatePicker setup:callback];
+}
+
++ (void)setupUITextField:(UITextFieldCallback)callback
+{
+    [UITextField setup:callback];
+}
+
++ (void)setupUIPageControl:(UIPageControlCallback)callback
+{
+    [UIPageControl setup:callback];
+}
+
 @end
