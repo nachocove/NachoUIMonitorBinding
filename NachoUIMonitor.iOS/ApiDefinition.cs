@@ -65,11 +65,36 @@ namespace NachoUIMonitorBinding
 	//
 	public delegate void UIButtonCallback (string description);
 
+    public delegate void UISegmentedControlCallback (string description, long index);
+
+    public delegate void UISwitchCallback (string description, string onOff);
+
+    public delegate void UIDatePickerCallback (string description, string date);
+
+    public delegate void UITextFieldCallback (string description);
+
+    public delegate void UIPageControlCallback (string description, long page);
+
     [BaseType (typeof (NSObject))]
     interface NachoUIMonitor
     {
         [Static, Export ("setupUIButton:")]
         void SetupUIButton (UIButtonCallback callback);
+
+        [Static, Export ("setupUISegmentedControl:")]
+        void SetupUISegmentedControl (UISegmentedControlCallback callback);
+
+        [Static, Export ("setupUISwitch:")]
+        void SetupUISwitch (UISwitchCallback callback);
+
+        [Static, Export ("setupUIDatePicker:")]
+        void SetupUIDatePicker (UIDatePickerCallback callback);
+
+        [Static, Export ("setupUITextField:")]
+        void SetupUITextField (UITextFieldCallback callback);
+
+        [Static, Export ("setupUIPageControl:")]
+        void SetupUIPageControl (UIPageControlCallback callback);
     }
 }
 
