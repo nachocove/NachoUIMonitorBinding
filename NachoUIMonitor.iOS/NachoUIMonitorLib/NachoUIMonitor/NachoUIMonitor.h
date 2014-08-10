@@ -8,9 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import "UIButton+NachoCoveMonitor.h"
+#import "UISegmentedControl+NcUISegmentedControlMonitor.h"
+#import "UISwitch+NcUISwitchMonitor.h"
+#import "UIDatePicker+NcUIDatePickerMonitor.h"
+#import "UITextField+NcUITextFieldMonitor.h"
+#import "UIPageControl+NcUIPageControlMonitor.h"
 
 @interface NachoUIMonitor : NSObject
 
 + (void)setupUIButton:(UIButtonCallback)callback;
++ (void)setupUISegmentedControl:(UISegmentedControlCallback)callback;
++ (void)setupUISwitch:(UISwitchCallback)callback;
++ (void)setupUIDatePicker:(UIDatePickerCallback)callback;
++ (void)setupUITextField:(UITextFieldCallback)callback;
++ (void)setupUIPageControl:(UIPageControlCallback)callback;
 
 @end

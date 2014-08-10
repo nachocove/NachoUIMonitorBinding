@@ -16,6 +16,21 @@
     [NachoUIMonitor setupUIButton:^(NSString *desc) {
         NSLog(@"[UIButton] %@", desc);
     }];
+    [NachoUIMonitor setupUISegmentedControl:^(NSString *desc, NSInteger index) {
+        NSLog(@"[UISegmentedControl] %@ %ld", desc, (long)index);
+    }];
+    [NachoUIMonitor setupUISwitch:^(NSString *desc, NSString *onOff) {
+        NSLog(@"[UISwitch] %@ %@", desc, onOff);
+    }];
+    [NachoUIMonitor setupUIDatePicker:^(NSString *desc, NSString *date) {
+        NSLog(@"[UIDatePicker] %@ %@", desc, date);
+    }];
+    [NachoUIMonitor setupUITextField:^(NSString *desc) {
+        NSLog(@"[UITextField] %@", desc);
+    }];
+    [NachoUIMonitor setupUIPageControl:^(NSString *desc, NSInteger page) {
+        NSLog(@"[UIPageControl] %@ %ld", desc, (long)page);
+    }];
     return YES;
 }
 							

@@ -19,9 +19,3 @@ typedef void (^UIButtonCallback)(NSString *desc);
 - (void)ncSendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event;
 
 @end
-
-@interface NachoCoveUIMonitor : NSObject
-
-+ (void)setupUIButton:(UIButtonCallback)callback;
-
-@end
