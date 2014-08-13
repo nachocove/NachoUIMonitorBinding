@@ -40,4 +40,14 @@
     [UIPageControl setup:callback];
 }
 
++ (void)setupUIAlertView:(UIAlertViewCallback)callback
+{
+    [UIAlertView setup:callback];
+}
+
++ (void)setupUIActionSheet:(UIActionSheetCallback)callback
+{
+    [UIActionSheet setup:callback];
+}
+
 @end

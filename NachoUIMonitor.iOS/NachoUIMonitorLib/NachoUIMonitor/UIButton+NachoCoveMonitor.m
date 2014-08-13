@@ -12,8 +12,6 @@
 
 NSString *ncUIButtonKey = @"ncUIButton";
 
-#define  MYDEBUG (0)
-
 @implementation UIButton (NcUIButtonMonitor)
 
 

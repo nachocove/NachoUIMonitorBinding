@@ -31,6 +31,12 @@
     [NachoUIMonitor setupUIPageControl:^(NSString *desc, NSInteger page) {
         NSLog(@"[UIPageControl] %@ %ld", desc, (long)page);
     }];
+    [NachoUIMonitor setupUIAlertView:^(NSString *desc, NSInteger index) {
+        NSLog(@"[UIAlertView] %@ %ld", desc, (long)index);
+    }];
+    [NachoUIMonitor setupUIActionSheet:^(NSString *desc, NSInteger index) {
+        NSLog(@"[UIActionSheet] %@ %ld", desc, (long)index);
+    }];
     return YES;
 }
 							

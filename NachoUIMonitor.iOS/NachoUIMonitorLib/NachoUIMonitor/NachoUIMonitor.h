@@ -13,6 +13,8 @@
 #import "UIDatePicker+NcUIDatePickerMonitor.h"
 #import "UITextField+NcUITextFieldMonitor.h"
 #import "UIPageControl+NcUIPageControlMonitor.h"
+#import "UIAlertView+NcUIAlertViewMonitor.h"
+#import "UIActionSheet+NcUIActionSheetMonitor.h"
 
 @interface NachoUIMonitor : NSObject
 
@@ -22,5 +24,7 @@
 + (void)setupUIDatePicker:(UIDatePickerCallback)callback;
 + (void)setupUITextField:(UITextFieldCallback)callback;
 + (void)setupUIPageControl:(UIPageControlCallback)callback;
++ (void)setupUIAlertView:(UIAlertViewCallback)callback;
++ (void)setupUIActionSheet:(UIActionSheetCallback)callback;
 
 @end

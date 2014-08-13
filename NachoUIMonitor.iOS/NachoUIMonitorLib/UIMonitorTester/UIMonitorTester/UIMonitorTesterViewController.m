@@ -8,7 +8,18 @@
 
 #import "UIMonitorTesterViewController.h"
 
+
+typedef void (^UIAlertViewCallback)(NSString *desc, NSInteger index);
+
+@interface UIAlertView (NcUIAlertViewMonitor)
+
++ (void)setup:(UIAlertViewCallback)callback;
+
+@end
+
 @interface UIMonitorTesterViewController ()
+
+@property(nonatomic, retain) id delegateProxy;
 
 @end
 
@@ -33,11 +44,23 @@
 - (IBAction)button1Clicked:(id)sender
 {
     NSLog(@"button1 clicked");
+
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Alert View"
+                                                 message:@"Alert View Message"
+                                                delegate:nil
+                                       cancelButtonTitle:@"Cancel"
+                                       otherButtonTitles:@"Ok", nil];
+    av.accessibilityLabel = @"alertview1";
+    [av show];
 }
 
 - (IBAction)button2Clicked:(id)sender
 {
     NSLog(@"button2 clicked");
+    
+    UIActionSheet *as = [[UIActionSheet alloc] initWithTitle:@"Action Sheet" delegate:nil cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Apple", @"Orange", nil];
+    as.accessibilityLabel = @"actionsheet1";
+    [as showInView:self.view];
 }
 
 - (IBAction)segCtrl1Changed:(id)sender
