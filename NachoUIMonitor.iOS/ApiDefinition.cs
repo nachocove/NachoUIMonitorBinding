@@ -79,6 +79,11 @@ namespace NachoUIMonitorBinding
 
     public delegate void UIActionSheetCallback (string description, long index);
 
+    public delegate void UITapGestureRecognizerCallback (string description, int numTouches,
+        PointF point1, PointF point2, PointF point3);
+
+    public delegate void UITableViewCallback (string description, string operation);
+
     [BaseType (typeof (NSObject))]
     interface NachoUIMonitor
     {
@@ -105,6 +110,12 @@ namespace NachoUIMonitorBinding
 
         [Static, Export ("setupUIActionSheet:")]
         void SetupUIActionSheet (UIActionSheetCallback callback);
+
+        [Static, Export ("setupUITapGestureRecognizer:")]
+        void SetupUITapGestureRecognizer (UITapGestureRecognizerCallback callback);
+
+        [Static, Export ("setupUITableView:")]
+        void SetupUITableView (UITableViewCallback callback);
     }
 }
 

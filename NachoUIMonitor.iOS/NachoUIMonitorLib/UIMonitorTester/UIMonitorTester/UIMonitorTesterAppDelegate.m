@@ -37,6 +37,10 @@
     [NachoUIMonitor setupUIActionSheet:^(NSString *desc, NSInteger index) {
         NSLog(@"[UIActionSheet] %@ %ld", desc, (long)index);
     }];
+    [NachoUIMonitor setupUITapGestureRecognizer:^(NSString *desc, unsigned int numTouches, CGPoint point1, CGPoint point2, CGPoint point3) {
+        NSLog(@"[UITapGestureRecognizer] %@ %u (%lf,%lf) (%lf,%lf) (%lf,%lf)", desc, numTouches,
+              point1.x, point1.y, point2.x, point2.y, point3.x, point3.y);
+    }];
     return YES;
 }
 							

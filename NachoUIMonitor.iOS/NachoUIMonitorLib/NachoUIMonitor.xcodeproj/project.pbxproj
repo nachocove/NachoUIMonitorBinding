@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BA63A139199AE28700C03DBE /* UIAlertView+NcUIAlertViewMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63A138199AE28700C03DBE /* UIAlertView+NcUIAlertViewMonitor.m */; };
 		BA63A13C199B252500C03DBE /* UIActionSheet+NcUIActionSheetMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63A13B199B252500C03DBE /* UIActionSheet+NcUIActionSheetMonitor.m */; };
+		BA8B84AD199BE001004CE0EB /* UITapGestureRecognizer+NcUITapGestureRecognizerMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8B84AC199BE001004CE0EB /* UITapGestureRecognizer+NcUITapGestureRecognizerMonitor.m */; };
+		BA8B84BD199C052E004CE0EB /* UITableView+NcUITableViewMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8B84BC199C052E004CE0EB /* UITableView+NcUITableViewMonitor.m */; };
 		BAB157731995A1330078F44E /* NcSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB157721995A1330078F44E /* NcSwizzle.m */; };
 		BAB157761995A29E0078F44E /* UISegmentedControl+NcUISegmentedControlMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB157751995A29E0078F44E /* UISegmentedControl+NcUISegmentedControlMonitor.m */; };
 		BAB15779199631F10078F44E /* UISwitch+NcUISwitchMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB15778199631F10078F44E /* UISwitch+NcUISwitchMonitor.m */; };
@@ -53,6 +55,10 @@
 		BA63A138199AE28700C03DBE /* UIAlertView+NcUIAlertViewMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+NcUIAlertViewMonitor.m"; sourceTree = "<group>"; };
 		BA63A13A199B252500C03DBE /* UIActionSheet+NcUIActionSheetMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+NcUIActionSheetMonitor.h"; sourceTree = "<group>"; };
 		BA63A13B199B252500C03DBE /* UIActionSheet+NcUIActionSheetMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+NcUIActionSheetMonitor.m"; sourceTree = "<group>"; };
+		BA8B84AB199BE001004CE0EB /* UITapGestureRecognizer+NcUITapGestureRecognizerMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITapGestureRecognizer+NcUITapGestureRecognizerMonitor.h"; sourceTree = "<group>"; };
+		BA8B84AC199BE001004CE0EB /* UITapGestureRecognizer+NcUITapGestureRecognizerMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITapGestureRecognizer+NcUITapGestureRecognizerMonitor.m"; sourceTree = "<group>"; };
+		BA8B84BB199C052E004CE0EB /* UITableView+NcUITableViewMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+NcUITableViewMonitor.h"; sourceTree = "<group>"; };
+		BA8B84BC199C052E004CE0EB /* UITableView+NcUITableViewMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+NcUITableViewMonitor.m"; sourceTree = "<group>"; };
 		BAB157711995A1330078F44E /* NcSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NcSwizzle.h; sourceTree = "<group>"; };
 		BAB157721995A1330078F44E /* NcSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NcSwizzle.m; sourceTree = "<group>"; };
 		BAB157741995A29E0078F44E /* UISegmentedControl+NcUISegmentedControlMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+NcUISegmentedControlMonitor.h"; sourceTree = "<group>"; };
@@ -156,6 +162,10 @@
 				BA63A138199AE28700C03DBE /* UIAlertView+NcUIAlertViewMonitor.m */,
 				BA63A13A199B252500C03DBE /* UIActionSheet+NcUIActionSheetMonitor.h */,
 				BA63A13B199B252500C03DBE /* UIActionSheet+NcUIActionSheetMonitor.m */,
+				BA8B84AB199BE001004CE0EB /* UITapGestureRecognizer+NcUITapGestureRecognizerMonitor.h */,
+				BA8B84AC199BE001004CE0EB /* UITapGestureRecognizer+NcUITapGestureRecognizerMonitor.m */,
+				BA8B84BB199C052E004CE0EB /* UITableView+NcUITableViewMonitor.h */,
+				BA8B84BC199C052E004CE0EB /* UITableView+NcUITableViewMonitor.m */,
 			);
 			path = NachoUIMonitor;
 			sourceTree = "<group>";
@@ -269,10 +279,12 @@
 			files = (
 				BAE389951992DC5800CBAF33 /* NachoUIMonitor.m in Sources */,
 				BAB157761995A29E0078F44E /* UISegmentedControl+NcUISegmentedControlMonitor.m in Sources */,
+				BA8B84AD199BE001004CE0EB /* UITapGestureRecognizer+NcUITapGestureRecognizerMonitor.m in Sources */,
 				BAE3898F1991A8C800CBAF33 /* UIButton+NachoCoveMonitor.m in Sources */,
 				BA63A13C199B252500C03DBE /* UIActionSheet+NcUIActionSheetMonitor.m in Sources */,
 				BAB15779199631F10078F44E /* UISwitch+NcUISwitchMonitor.m in Sources */,
 				BAB157731995A1330078F44E /* NcSwizzle.m in Sources */,
+				BA8B84BD199C052E004CE0EB /* UITableView+NcUITableViewMonitor.m in Sources */,
 				BAB1578519967DF70078F44E /* UIPageControl+NcUIPageControlMonitor.m in Sources */,
 				BAB1577F1996786E0078F44E /* UIDatePicker+NcUIDatePickerMonitor.m in Sources */,
 				BAB1578219967BFB0078F44E /* UITextField+NcUITextFieldMonitor.m in Sources */,

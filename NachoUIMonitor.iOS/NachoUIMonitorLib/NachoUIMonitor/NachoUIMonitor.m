@@ -50,4 +50,14 @@
     [UIActionSheet setup:callback];
 }
 
++ (void)setupUITapGestureRecognizer:(UITapGestureRecognizerCallback)callback
+{
+    [UITapGestureRecognizer setup:callback];
+}
+
++ (void)setupUITableView:(UITableViewCallback)callback
+{
+    [UITableView setup:callback];
+}
+
 @end

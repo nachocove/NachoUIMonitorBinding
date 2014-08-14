@@ -33,6 +33,18 @@ typedef void (^UIAlertViewCallback)(NSString *desc, NSInteger index);
     self.datePicker1.accessibilityLabel = @"datepicker1";
     self.pageCtrl1.accessibilityLabel = @"pagectrl1";
     self.textField1.delegate = self;
+
+#if 1
+    self.tapRecognizer = [[UITapGestureRecognizer alloc] init];
+    [self.tapRecognizer addTarget:self action:@selector(tapsRecognized:)];
+#else
+    self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapsRecognized:)];
+#endif
+    self.tapRecognizer.accessibilityLabel = @"taprecognizer";
+    // two 2-finger taps
+    self.tapRecognizer.numberOfTapsRequired = 3;
+    self.tapRecognizer.numberOfTouchesRequired = 1;
+    [self.view addGestureRecognizer:self.tapRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,6 +111,17 @@ typedef void (^UIAlertViewCallback)(NSString *desc, NSInteger index);
     NSLog(@"pageCtrl1 changed");
 }
 
+- (void)tapsRecognized:(UIGestureRecognizer *)gestutreRecognizer
+{
+    assert (nil != gestutreRecognizer);
+    NSUInteger numTouches = [gestutreRecognizer numberOfTouches];
+    NSLog(@"taprecognizer tapped (touches=%lu)", (unsigned long)numTouches);
+    for (unsigned int n = 0; n < numTouches; n++) {
+        CGPoint point = [gestutreRecognizer locationOfTouch:n inView:self.view];
+        NSLog(@"   [%u] (%lf, %lf)", n, point.x, point.y);
+    }
+}
+                          
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

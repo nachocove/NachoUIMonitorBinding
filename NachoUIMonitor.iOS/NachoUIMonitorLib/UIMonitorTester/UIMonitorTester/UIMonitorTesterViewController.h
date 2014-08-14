@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageCtrl1;
 
+@property (nonatomic, retain) UITapGestureRecognizer *tapRecognizer;
+
 - (IBAction)button1Clicked:(id)sender;
 - (IBAction)button2Clicked:(id)sender;
 - (IBAction)segCtrl1Changed:(id)sender;
