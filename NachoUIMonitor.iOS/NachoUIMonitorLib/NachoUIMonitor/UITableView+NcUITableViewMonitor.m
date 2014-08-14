@@ -71,11 +71,19 @@ NSString *ncUITableViewKey = @"ncUITableView";
     return [self.realDelegate methodSignatureForSelector:selector];
 }
 
+- (BOOL)respondsToSelector:(SEL)aSelector
+{
+    if (nil == self.realDelegate) {
+        return NO;
+    }
+    return [self.realDelegate respondsToSelector:aSelector];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self makeCallback:tableView operation:@"SELECT" path:indexPath];
     if ([self.realDelegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
-        [self.realDelegate tableView:tableView didDeselectRowAtIndexPath:indexPath];
+        [self.realDelegate tableView:tableView didSelectRowAtIndexPath:indexPath];
     }
 }
 
