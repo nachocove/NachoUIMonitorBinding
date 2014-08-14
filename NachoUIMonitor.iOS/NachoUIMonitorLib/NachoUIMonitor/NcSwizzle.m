@@ -9,6 +9,8 @@
 #import "objc/runtime.h"
 #import "NcSwizzle.h"
 
+#define  MYDEBUG (0)
+
 @implementation NcSwizzle
 
 #if MYDEBUG
@@ -44,8 +46,8 @@
     method_setImplementation(newMethod, origFunction);
     
 #if MYDEBUG
-    [NcSwizzle dump:cls method:@selector(sendAction:to:forEvent:)];
-    [NcSwizzle dump:cls method:@selector(ncSendAction:to:forEvent:)];
+    [NcSwizzle dump:cls method:origSelector];
+    [NcSwizzle dump:cls method:newSelector];
 #endif
 }
 

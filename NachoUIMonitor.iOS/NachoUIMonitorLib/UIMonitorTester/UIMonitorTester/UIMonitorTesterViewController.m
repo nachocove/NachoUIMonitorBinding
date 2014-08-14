@@ -8,7 +8,18 @@
 
 #import "UIMonitorTesterViewController.h"
 
+
+typedef void (^UIAlertViewCallback)(NSString *desc, NSInteger index);
+
+@interface UIAlertView (NcUIAlertViewMonitor)
+
++ (void)setup:(UIAlertViewCallback)callback;
+
+@end
+
 @interface UIMonitorTesterViewController ()
+
+@property(nonatomic, retain) id delegateProxy;
 
 @end
 
@@ -22,6 +33,18 @@
     self.datePicker1.accessibilityLabel = @"datepicker1";
     self.pageCtrl1.accessibilityLabel = @"pagectrl1";
     self.textField1.delegate = self;
+
+#if 1
+    self.tapRecognizer = [[UITapGestureRecognizer alloc] init];
+    [self.tapRecognizer addTarget:self action:@selector(tapsRecognized:)];
+#else
+    self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapsRecognized:)];
+#endif
+    self.tapRecognizer.accessibilityLabel = @"taprecognizer";
+    // two 2-finger taps
+    self.tapRecognizer.numberOfTapsRequired = 3;
+    self.tapRecognizer.numberOfTouchesRequired = 1;
+    [self.view addGestureRecognizer:self.tapRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,11 +56,23 @@
 - (IBAction)button1Clicked:(id)sender
 {
     NSLog(@"button1 clicked");
+
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Alert View"
+                                                 message:@"Alert View Message"
+                                                delegate:nil
+                                       cancelButtonTitle:@"Cancel"
+                                       otherButtonTitles:@"Ok", nil];
+    av.accessibilityLabel = @"alertview1";
+    [av show];
 }
 
 - (IBAction)button2Clicked:(id)sender
 {
     NSLog(@"button2 clicked");
+    
+    UIActionSheet *as = [[UIActionSheet alloc] initWithTitle:@"Action Sheet" delegate:nil cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Apple", @"Orange", nil];
+    as.accessibilityLabel = @"actionsheet1";
+    [as showInView:self.view];
 }
 
 - (IBAction)segCtrl1Changed:(id)sender
@@ -76,6 +111,17 @@
     NSLog(@"pageCtrl1 changed");
 }
 
+- (void)tapsRecognized:(UIGestureRecognizer *)gestutreRecognizer
+{
+    assert (nil != gestutreRecognizer);
+    NSUInteger numTouches = [gestutreRecognizer numberOfTouches];
+    NSLog(@"taprecognizer tapped (touches=%lu)", (unsigned long)numTouches);
+    for (unsigned int n = 0; n < numTouches; n++) {
+        CGPoint point = [gestutreRecognizer locationOfTouch:n inView:self.view];
+        NSLog(@"   [%u] (%lf, %lf)", n, point.x, point.y);
+    }
+}
+                          
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

@@ -486,6 +486,7 @@
 				BAE389D619943F2D00CBAF33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAE389D719943F2D00CBAF33 /* Build configuration list for PBXNativeTarget "UIMonitorTesterTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +495,7 @@
 				BAE389D919943F2D00CBAF33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

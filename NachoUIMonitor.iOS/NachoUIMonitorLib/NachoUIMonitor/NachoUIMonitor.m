@@ -40,4 +40,24 @@
     [UIPageControl setup:callback];
 }
 
++ (void)setupUIAlertView:(UIAlertViewCallback)callback
+{
+    [UIAlertView setup:callback];
+}
+
++ (void)setupUIActionSheet:(UIActionSheetCallback)callback
+{
+    [UIActionSheet setup:callback];
+}
+
++ (void)setupUITapGestureRecognizer:(UITapGestureRecognizerCallback)callback
+{
+    [UITapGestureRecognizer setup:callback];
+}
+
++ (void)setupUITableView:(UITableViewCallback)callback
+{
+    [UITableView setup:callback];
+}
+
 @end

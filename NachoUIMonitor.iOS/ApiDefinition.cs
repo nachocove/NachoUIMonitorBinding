@@ -75,6 +75,15 @@ namespace NachoUIMonitorBinding
 
     public delegate void UIPageControlCallback (string description, long page);
 
+    public delegate void UIAlertViewCallback (string description, long index);
+
+    public delegate void UIActionSheetCallback (string description, long index);
+
+    public delegate void UITapGestureRecognizerCallback (string description, int numTouches,
+        PointF point1, PointF point2, PointF point3);
+
+    public delegate void UITableViewCallback (string description, string operation);
+
     [BaseType (typeof (NSObject))]
     interface NachoUIMonitor
     {
@@ -95,6 +104,18 @@ namespace NachoUIMonitorBinding
 
         [Static, Export ("setupUIPageControl:")]
         void SetupUIPageControl (UIPageControlCallback callback);
+
+        [Static, Export ("setupUIAlertView:")]
+        void SetupUIAlertView (UIAlertViewCallback callback);
+
+        [Static, Export ("setupUIActionSheet:")]
+        void SetupUIActionSheet (UIActionSheetCallback callback);
+
+        [Static, Export ("setupUITapGestureRecognizer:")]
+        void SetupUITapGestureRecognizer (UITapGestureRecognizerCallback callback);
+
+        [Static, Export ("setupUITableView:")]
+        void SetupUITableView (UITableViewCallback callback);
     }
 }
 
