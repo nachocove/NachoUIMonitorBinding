@@ -65,7 +65,7 @@ namespace NachoUIMonitorBinding
 	//
 	public delegate void UIButtonCallback (string description);
 
-    public delegate void UISegmentedControlCallback (string description, long index);
+    public delegate void UISegmentedControlCallback (string description, int index);
 
     public delegate void UISwitchCallback (string description, string onOff);
 
@@ -73,11 +73,11 @@ namespace NachoUIMonitorBinding
 
     public delegate void UITextFieldCallback (string description);
 
-    public delegate void UIPageControlCallback (string description, long page);
+    public delegate void UIPageControlCallback (string description, int page);
 
-    public delegate void UIAlertViewCallback (string description, long index);
+    public delegate void UIAlertViewCallback (string description, int index);
 
-    public delegate void UIActionSheetCallback (string description, long index);
+    public delegate void UIActionSheetCallback (string description, int index);
 
     public delegate void UITapGestureRecognizerCallback (string description, int numTouches,
         PointF point1, PointF point2, PointF point3);
