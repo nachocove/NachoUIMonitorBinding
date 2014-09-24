@@ -60,6 +60,8 @@ NSString *ncUITableViewKey = @"ncUITableView";
 {
     if ([self.realDelegate respondsToSelector:[invocation selector]]) {
         [invocation invokeWithTarget:self.realDelegate];
+    } else {
+        NSLog(@"Unknown selector for table view delegate %@", NSStringFromSelector([invocation selector]));
     }
 }
 
@@ -77,6 +79,14 @@ NSString *ncUITableViewKey = @"ncUITableView";
         return NO;
     }
     return [self.realDelegate respondsToSelector:aSelector];
+}
+
+- (BOOL)conformsToProtocol:(Protocol *)aProtocol
+{
+    if (nil == self.realDelegate) {
+        return NO;
+    }
+    return [self.realDelegate conformsToProtocol:aProtocol];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
