@@ -26,7 +26,14 @@ NSString *ncUIButtonKey = @"ncUIButton";
 - (void)ncSendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event
 {
     UIButtonCallback callback = objc_getAssociatedObject(ncUIButtonKey, NULL);
-    if (nil != callback) {
+    BOOL doCallback = YES;
+    if (nil != target) {
+        NSString *className = NSStringFromClass([target class]);
+        if ((nil != className) && [className hasSuffix:@"UIBarButtonItem"]) {
+            doCallback = NO;
+        }
+    }
+    if (doCallback && (nil != callback)) {
         callback(self.accessibilityLabel);
     }
     [self ncSendAction:action to:target forEvent:event];
