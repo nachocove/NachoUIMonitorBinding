@@ -29,7 +29,7 @@ NSString *ncUIButtonKey = @"ncUIButton";
     BOOL doCallback = YES;
     if (nil != target) {
         NSString *className = NSStringFromClass([target class]);
-        if ((nil != className) && [className hasSuffix:@"UIBarButtonItem"]) {
+        if ((nil != className) && [[target class] isSubclassOfClass:[UIBarButtonItem class]]) {
             doCallback = NO;
         }
     }
