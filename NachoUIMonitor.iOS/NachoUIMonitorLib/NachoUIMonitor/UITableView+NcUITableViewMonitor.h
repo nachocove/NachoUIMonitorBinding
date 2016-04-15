@@ -18,18 +18,6 @@ typedef void (^UITableViewCallback)(NSString *desc, NSString *operation);
 
 @end
 
-@interface NcUITableViewDelegateProxy : NSProxy<UITableViewDelegate>
-
-@property(nonatomic, retain) id realDelegate;
-
-- (void)makeCallback:(UITableView *)tableView operation:(NSString *)operation path:(NSIndexPath *)path;
-
-- (id)initWithDelegate:(id<UITableViewDelegate>)delegate;
-
-- (void)forwardInvocation:(NSInvocation *)invocation;
-
-@end
-
 @interface NSIndexPath (NcUITableViewMonitor)
 
 - (NSString *)stringAtPosition:(NSUInteger)node;
