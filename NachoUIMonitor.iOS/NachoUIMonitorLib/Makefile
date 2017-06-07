@@ -9,13 +9,12 @@ XCBUILD := xcodebuild -target NachoUIMonitor -configuration Release
 	lipo -create -output $@ $^
 
 $(IPHONE_LIB):
-	$(XCBUILD) -sdk iphoneos clean build
+	$(XCBUILD) -sdk iphoneos build
 
 $(SIMULATOR_LIB):
-	$(XCBUILD) -sdk iphonesimulator clean build
-
+	$(XCBUILD) -sdk iphonesimulator build
 
 clean:
-	rm -f $(LIB)
-	rm -fr build/
+	$(XCBUILD) -sdk iphoneos clean
+	$(XCBUILD) -sdk iphonesimulator clean
 	rm -f ../$(LIB)
