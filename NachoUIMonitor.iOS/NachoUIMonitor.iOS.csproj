@@ -35,10 +35,10 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <Target Name="BuildNachoNative">
-    <Exec Command="make" WorkingDirectory="$(ProjectDir)/NachoUIMonitorLib"/>
+    <Exec Command="make" WorkingDirectory="$(ProjectDir)/NachoUIMonitorLib" />
   </Target>
   <Target Name="CleanNachoNative">
-    <Exec Command="make clean" WorkingDirectory="$(ProjectDir)/NachoUIMonitorLib"/>
+    <Exec Command="make clean" WorkingDirectory="$(ProjectDir)/NachoUIMonitorLib" />
   </Target>
   <ItemGroup>
     <Reference Include="System" />
